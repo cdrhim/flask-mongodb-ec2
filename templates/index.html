@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="임해룡">
+    <meta name="keyword" content="임해룡">
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static',filename='favicon.ico') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <script async src="{{ url_for('static',filename='app.js') }}"></script>
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="[Web] 종합 $('.과제') 세트">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="과제를 제출합니다.">
+    <title>각종 웹상 구현가능한 기능들 모음!</title>
+</head>
+
+<body>
+    <video autoplay muted loop id="smoke">
+        <source src="{{ url_for('static',filename='video.mp4') }}" type="video/mp4">
+        브라우저를 업그레이드 하셔야 비디오를 보실 수 있습니다! 아니면 타 브라우저 이용해주세요!
+    </video>
+    <header>
+        <div class="showcase">
+            <h1><a href="index.html">해룡's Webpage</a></h1>
+            <p>Version 2022. 07. 27</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#homepage-anchor">홈페이지</a></li>
+                <li><a href="#bucket-section">버킷리스트</a></li>
+                <li><a href="#web-crawling"> 웹크롤링(웹스크래핑)</a></li>
+                <li><a href="#mongo-db">몽고DB 확인해보기</a></li>
+                <li><a href="#guestbook">방명록</a></li>
+                <li><a href="#ping-me">Ping Me!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="stitch">
+        <p>Catch me!</p>
+        <a href="#bucket-section"><img id="dancing-stitch" src="{{ url_for('static',filename='dancing.gif') }}" alt="Dancing Stitch"></a>
+    </div>
+    <div class="hook">
+        <p></p>
+    </div>
+    <main>
+        <div id="homepage-anchor">
+            <h1></h1>
+        </div>
+        <div id="homepage">
+            <h1>Have a rest at the homepage beach!</h1>
+            <p><sup>(기능 전부 구현한 것 중에 과제(버킷리스트) 올립니다.)</sup></p>
+        </div>
+        <div id="bucket-section">
+            <h1>버킷리스트</h1>
+            <div class="bucket-mypic">
+                <h1>My Bucket List</h1>
+            </div>
+            <div class="bucket-mybox">
+                <div class="bucket-mybucket">
+                    <input id="bucket" class="form-control" type="text" placeholder="이루고 싶은 것을 입력하세요">
+                    <button onclick="save_bucket()" type="button" class="btn btn-outline-primary">기록하기</button>
+                </div>
+            </div>
+            <div class="bucket-mybox" id="bucket-list">
+            </div>
+        </div>
+        <div id="web-crawling">
+            <h1>웹크롤링(웹스크래핑)</h1>
+        </div>
+        <div id="mongo-db">
+            <h1>몽고DB</h1>
+        </div>
+        <div id="guestbook">
+            <h1>방명록</h1>
+            <div class="mypic">
+                <h1>아티스트이름 팬명록</h1>
+                <p>현재기온: <span id="temp">36</span>도</p>
+            </div>
+            <div class="mypost">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="name" placeholder="url">
+                    <label for="floatingInput">닉네임</label>
+                </div>
+                <div class="form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" id="comment"
+                      style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">응원댓글</label>
+                </div>
+                <button onclick="save_comment()" type="button" class="btn btn-dark">응원 남기기</button>
+            </div>
+            <div class="mycards" id="comment-list">   
+            </div>
+        </div>
+        <div id="ping-me">
+            <h1>And Ping Me!</h1>
+            <p><span style="color: rgba(5, 195, 221, 0.7); font-weight: bold;">한 번 더! ➜</span> Made by 임해룡 <sup>(Anthony)</sup>. Follow me on <a href="https://www.twitter.com/anthonyrhim"><span style="color: #1DA1F2; font-weight: bold">Twitter</span></a> or <a href="https://www.github.com/cdrhim"><span style="color: #AD5C51; font-weight: bold;">Github</a>, 맞팔하겠습니다. 😉</p>
+        </div>
+    </main>
+    <footer>
+        <span style="color: rgba(5, 195, 221, 0.7); font-weight: bold;">➜</span> Made by 임해룡 <sup>(Anthony)</sup>. Follow me on <a href="https://www.twitter.com/anthonyrhim"><span style="color: #1DA1F2; font-weight: bold">Twitter</span></a> or <a href="https://www.github.com/cdrhim"><span style="color: #AD5C51; font-weight: bold;">Github</a>, 맞팔하겠습니다. 😉
+    </footer>
+</body>
+
+</html>
